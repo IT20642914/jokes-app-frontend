@@ -4,9 +4,8 @@ import { clearAuthData } from "../core/authUtils";
 
 // 1. Deliver Jokes Microservice (No Auth Required)
 export const axiosDeliverJokesInstance = axios.create({
-  baseURL: "http://localhost:9093", // Port for Deliver Jokes Microservice
+  baseURL: "https://deliver-jokes-microservice-production-668a.up.railway.app", // Port for Deliver Jokes Microservice
 });
-
 axiosDeliverJokesInstance.interceptors.response.use(
   (response: any) => response,
   async (error: { response: any }) => {
@@ -16,7 +15,7 @@ axiosDeliverJokesInstance.interceptors.response.use(
 
 // 2. Moderate Jokes Microservice (Auth Required)
 export const axiosModerateJokesInstance = axios.create({
-  baseURL: "http://localhost:9092", // Port for Moderate Jokes Microservice
+  baseURL: "https://moderate-jokes-microservice-production-5c00.up.railway.app", // Port for Moderate Jokes Microservice
 });
 
 axiosModerateJokesInstance.interceptors.request.use(
@@ -40,7 +39,7 @@ axiosModerateJokesInstance.interceptors.response.use(
 
 // 3. Submit Jokes Microservice (No Auth Required)
 export const axiosSubmitJokesInstance = axios.create({
-  baseURL: "http://localhost:9091",
+  baseURL: "https://submit-jokes-microservice-production-5d7b.up.railway.app",
 });
 
 axiosSubmitJokesInstance.interceptors.response.use(
