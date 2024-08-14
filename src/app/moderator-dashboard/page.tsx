@@ -18,7 +18,8 @@ import ConfirmationModal from "@/components/ConfirmationModal/ConfirmationModal"
 import { SCREEN_MODES } from "@/utilities/constants/app.constants";
 
 const ModeratorDashboard = () => {
-  // Hooks must be at the top level
+const isAuthenticated = useRequireAuth();
+
   const INITIAL_JOKE_FORM_DATA: JokeSubmitFormDto = {
     status: {
       value: "",
@@ -69,10 +70,7 @@ const ModeratorDashboard = () => {
       error: null,
     },
   };
-  const isAuthenticated = useRequireAuth();
-  if (!isAuthenticated) {
-    return null;
-  }
+ 
   const [jokeFormData, setJokeFormData] = useState<JokeSubmitFormDto>(
     INITIAL_JOKE_FORM_DATA,
   );
@@ -86,10 +84,13 @@ const ModeratorDashboard = () => {
     "approve" | "reject"
   >();
  
+ 
   useEffect(() => {
-    getJockTypes();
-    getPendingJoke();
-  }, []);
+    if (isAuthenticated) {
+      getJockTypes();
+      getPendingJoke();
+    }
+  }, [isAuthenticated]);
 
 
 
