@@ -126,7 +126,7 @@ const Page = () => {
         punchline: jokeFormData.punchline.value,
         type: {
           _id: jokeFormData.type.value._id,
-          name: jokeFormData.type.value,
+          name: jokeFormData.type.value.name,
         },
         author: jokeFormData.author.value,
       };
