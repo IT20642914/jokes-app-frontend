@@ -92,7 +92,10 @@ const Page = () => {
         ...jokeFormData,
         [field]: {
           ...jokeFormData[field],
-          value: selectedType || ({} as JokeTypeDto),
+           value: {
+            _id: selectedType?._id,
+            name: selectedType?.name,
+          } as JokeTypeDto,
         },
       });
       return;
@@ -130,9 +133,11 @@ const Page = () => {
         },
         author: jokeFormData.author.value,
       };
+      console.log("jokeData", jokeData);
       jokeService
         .submitJoke(jokeData)
         .then((response) => {
+          console.log("jockAdd Res", response.data);
           toast.success("Joke submitted successfully");
           setJokeFormData(INITIAL_JOKE_FORM_DATA);
           setIsLoading(false);
