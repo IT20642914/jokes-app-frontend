@@ -1,0 +1,95 @@
+
+.container {
+    height: 80vh;
+    display: flex;
+  }
+  
+  .loginSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .title {
+    color: #3e8bff;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  .forgotPassword{
+margin-top: 1rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  .subtitle {
+    color: #333;
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+
+    margin-bottom: 1.5em;
+  }
+  
+  .form {
+    width: 80%;
+  }
+  
+  .button {
+    margin-top: 1em;
+    margin-bottom: 1rem;
+
+  }
+  
+  .imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(133.25% 177.67% at 11.15% -22.64%, #4C02F1 0%, #4B02EF 1%, #3903C4 13%, #29039E 25%, #1D0380 38%, #130468 51%, #0C0457 65%, #07044D 81%, #06044A 100%);
+    @media (max-width: 700px) {
+        display: none;
+      }
+  }
+  
+  .image {
+    // width: 100%;
+    object-fit: cover;
+  }
+  
+  .shape1 {
+     width: 503.74px;
+     height: 180.21px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 0px;
+    @media (max-width: 700px) {
+        // display: none;
+        bottom: -12px;
+        left: 0;
+        gap: 0px;
+        
+      }
+      @media (min-width: 700px) and (max-width: 900px) {
+        display: none;
+      }
+  }
+  
+  .shape2 {
+    width: 576.73px;
+    height: 163.21px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    gap: 0px;
+    @media (max-width: 700px) {
+        bottom: -12px;
+        left: 0;
+        gap: 0px;
+        
+      }
+      @media (min-width: 700px) and (max-width: 900px) {
+        display: none;
+
+      }
+  }

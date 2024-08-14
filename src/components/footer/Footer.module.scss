@@ -1,0 +1,16 @@
+.footer {
+    background: radial-gradient(133.25% 177.67% at 11.15% -22.64%, #4C02F1 0%, #4B02EF 1%, #3903C4 13%, #29039E 25%, #1D0380 38%, #130468 51%, #0C0457 65%, #07044D 81%, #06044A 100%);
+    padding: 20px;
+    color: white;
+    text-align: left;
+  }
+  
+  .footer a {
+    color: inherit;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  

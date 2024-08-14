@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+
+
+}
+.title {
+    text-align: center;
+    color: #4d00aa;
+    font-size: 3em;
+    margin-bottom: 0.1em;
+}
+.formContainerbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    padding: 20px;
+    // border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    width: 50%;
+    margin-left: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin-right: auto;
+}
+.formContainer{
+    min-height: 60vh;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-right: auto;
+}
+.noPendingJokesMessage {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .noPendingJokesMessage h2 {
+
+    font-size: 1.5rem;
+    color: #333;
+  }
