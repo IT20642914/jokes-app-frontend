@@ -191,12 +191,13 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} md={6}>
             <CustomButton
+              marginBlock={0}
               variant="contained"
               size="large"
               backgroundColor="#4C02F1"
               onClick={handleGetNewJock}
               isLoading={isLoading}
-              height="2.5rem"
+              height="3.3rem"
               text={"Get a New Joke"}
             />
           </Grid>

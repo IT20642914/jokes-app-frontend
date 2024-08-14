@@ -15,6 +15,7 @@ interface CustomButtonProps {
   isLoading?: boolean;
   fullWidth?: boolean; // New prop to indicate loading state
   hoverBackGroundColor?: string;
+  marginBlock?: number;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -29,12 +30,14 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   onClick,
   hoverBackGroundColor = "#437EF7",
   isLoading = false, // Default to false if not provided
+  marginBlock =1
 }) => {
   return (
     <Button
       variant={variant}
       sx={{
-        margin: "0.5rem",
+        margin: 0,
+        marginBlock: marginBlock,
         background: backgroundColor,
         color: color,
         width: fullWidth ? "100%" : "auto",

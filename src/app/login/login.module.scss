@@ -3,7 +3,12 @@
     height: 80vh;
     display: flex;
   }
-  
+  .loginBox{
+    align-items: center !important;
+    justify-content: center;
+    justify-self: center;
+    width: 100%;
+  }
   .loginSection {
     display: flex;
     flex-direction: column;

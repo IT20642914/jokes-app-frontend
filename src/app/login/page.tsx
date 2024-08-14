@@ -112,7 +112,6 @@ const Login = () => {
         <Grid item xs={12} md={6} className={styles.loginSection}>
           <Box className={styles.loginBox}>
             <Typography className={styles.subtitle}>Welcome Back!</Typography>
-
             <StyledTextField
               label="Enter Email"
               variant="outlined"
@@ -166,19 +165,22 @@ const Login = () => {
                 ),
               }}
             />
-          </Box>
-          <CustomButton
+            <CustomButton
+            marginBlock={2}
             text="Login"
             color="#ffff"
             variant="contained"
             backgroundColor="#29039E"
             textTransform="uppercase"
+            
             size="large"
             isLoading={false}
             onClick={() => {
               handleLogin();
             }}
           />
+          </Box>
+         
         </Grid>
         <Grid item xs={12} md={6} className={styles.imageSection}>
           <Image
