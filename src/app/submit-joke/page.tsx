@@ -88,6 +88,7 @@ const Page = () => {
       const selectedType: JokeTypeDto | undefined = jockTypes.find(
         (type: JokeTypeDto) => type._id === value,
       );
+      console.log("selectedType", selectedType);
       setJokeFormData({
         ...jokeFormData,
         [field]: {
