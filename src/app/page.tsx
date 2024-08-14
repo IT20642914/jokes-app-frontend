@@ -70,7 +70,14 @@ export default function Home() {
 
   const getJockTypes = () => {
     jokeService.getJokeTypes().then((response) => {
-      setJockTypes(response.data.data);
+      console.log("response", response.data);
+      if (response.data !== null) {
+        setJockTypes(response.data.data);
+      }
+      
+    }).catch((error) => {
+      console.log("error", error);
+      setJockTypes([])
     });
   };
 
@@ -113,6 +120,9 @@ export default function Home() {
           value: response.data.data.author,
         },
       });
+    }).catch((error) => {
+      console.log("error", error);
+      setIsLoading(false);
     });
   };
 

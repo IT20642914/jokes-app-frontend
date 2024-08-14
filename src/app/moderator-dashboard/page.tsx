@@ -94,7 +94,14 @@ const ModeratorDashboard = () => {
 
   const getJockTypes = () => {
     jokeService.getJokeTypes().then((response) => {
-      setJockTypes(response.data.data);
+      console.log("response", response.data);
+      if (response.data !== null) {
+        setJockTypes(response.data.data);
+      }
+      
+    }).catch((error) => {
+      console.log("error", error);
+      setJockTypes([])
     });
   };
 
@@ -134,6 +141,10 @@ const ModeratorDashboard = () => {
           },
         });
       }
+    }).catch((error) => {
+        console.log("error", error);
+        setIsHavePendingJoke(false);
+        setJokeFormData(INITIAL_JOKE_FORM_DATA);
     });
   };
 

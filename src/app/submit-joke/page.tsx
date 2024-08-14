@@ -77,6 +77,9 @@ const Page = () => {
   const getJockTypes = () => {
     jokeService.getJokeTypes().then((response) => {
       setJockTypes(response.data.data);
+    }).catch((error) => {
+      setJockTypes([]);
+      console.log("error", error);
     });
   };
 
