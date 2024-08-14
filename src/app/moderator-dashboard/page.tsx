@@ -70,6 +70,9 @@ const ModeratorDashboard = () => {
     },
   };
   const isAuthenticated = useRequireAuth();
+  if (!isAuthenticated) {
+    return null;
+  }
   const [jokeFormData, setJokeFormData] = useState<JokeSubmitFormDto>(
     INITIAL_JOKE_FORM_DATA,
   );
@@ -82,15 +85,13 @@ const ModeratorDashboard = () => {
   const [actionToConfirm, setActionToConfirm] = useState<
     "approve" | "reject"
   >();
-
+ 
   useEffect(() => {
     getJockTypes();
     getPendingJoke();
   }, []);
 
-  if (!isAuthenticated) {
-    return null;
-  }
+
 
   const getJockTypes = () => {
     jokeService.getJokeTypes().then((response) => {
